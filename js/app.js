@@ -12,20 +12,26 @@ new Chart(document.getElementById('horizontalbarChart'), {
 	options:{
 		legend:{
 			display: false
+		},
+		animation: {
+			duration:'2000',
+			easing:'easeInBounce'
 		}
 		
 		}
 });
 
-new Chart (document.getElementById('barChart'),{
+
+
+var updatingChart = new Chart (document.getElementById('barchart'),{
 	type: 'bar',
 	data:{
-		labels: ['AUT','BEL','CAN','FIN','FRA','GBR','NOR','SUI','SWE','USA'],
+		labels: ['BEL','CAN','FIN','FRA','GBR','NOR','SUI','SWE','USA'],
 		datasets:[
 		{
 			label: 'Number of Medals',
-			data: [103, 7, 107, 221, 81,34, 127, 132, 177, 167],
-			backgroundColor: ['#FF0000', '#800000', '#DC143C','#191970','#FF6347','#00BFFF','#FF8C00','#8B008B','#FFD700','#228B22']
+			data: [ 7, 107, 221, 81,34, 127, 132, 177, 167],
+			backgroundColor: [ '#800000', '#DC143C','#191970','#FF6347','#00BFFF','#FF8C00','#8B008B','#FFD700','#228B22']
 		}
 
 		]
@@ -33,9 +39,25 @@ new Chart (document.getElementById('barChart'),{
 	options: {
 		legend: {
             display: false
+		},
+		animation: {
+			duration:'2000',
+			easing:'easeInOutBack'
 		}
 	}
 });
+
+function addData(chart, label, data, backgroundColor){
+	chart.data.labels.push(label);
+	chart.data.datasets[0].data.push(data);
+	chart.data.datasets[0].backgroundColor.push(backgroundColor);
+	chart.update();
+}
+
+setTimeOut(function(){
+	addData(updatingChart, 'AUT', '103', '#FF0000');
+},3000);
+
 
 new Chart (document.getElementById('pieChart'),{
 	type: 'pie',
@@ -52,11 +74,15 @@ new Chart (document.getElementById('pieChart'),{
 	options: {
 		title: {
 			display: true
+		},
+		animation: {
+			duration:'2000',
+			easing:'easeInCirc'
 		}
 	}
 });
 
-new Chart(document.getElementById('advancedChart'),{
+var updatingChart = new Chart(document.getElementById('advancedChart'),{
 	type: 'bar',
 	data:{
 		labels: ['1994','1998','2002','2006','2010','2014'],
@@ -65,7 +91,7 @@ new Chart(document.getElementById('advancedChart'),{
 			label:'Number of victories',
 			data:[40,49,75,68,91,90],
 			backgroundColor: ['rgb(0,0,205,0.2)',
-			'rgb(0,0,205,0.2)',
+			'rgb(0,0,205,0.2 )',
 			'rgb(0,0,205,0.2)',
 			'rgb(0,0,205,0.2)',
 			'rgb(0,0,205,0.2)',
@@ -91,12 +117,17 @@ new Chart(document.getElementById('advancedChart'),{
 			borderWidth:1	
 		}
 		]
+	},
+	options:{
+		legend:{
+			disply:true,
+		},
+		animation:{
+			duration:'3000',
+			easing:'easeInOutQuint'
+		}
 	}
 });
-
-
-
-
 
 
 
