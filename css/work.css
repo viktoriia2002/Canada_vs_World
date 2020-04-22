@@ -1,4 +1,133 @@
+body{
+	margin: 0 ;
+  padding: 0;
+}
+
+hr{
+	margin: 50px 0;
+}
+
 .hidden{
 
   display: none;
 }
+
+.container{
+
+  width: 940px;
+  margin: 0 auto;
+}
+
+
+.mainheader {
+  font-family: Silom, sans-serif;
+  font-weight: normal;
+  font-size: 23px;
+  color: #002157;
+  text-align: center;
+
+}
+
+.mainheader img{
+  margin-left: 20px; 
+}
+
+.bronze h2{
+font-family: Silom, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: #002157;
+  text-align: center;
+  text-decoration:underline;
+}
+ 
+.text1{
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #002157;
+}
+
+.text2{
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #002157;
+}
+
+.text3{
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #002157;
+}
+
+.text4{
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #002157;
+}
+
+.silver h2{
+  font-family: Silom, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: #002157;
+  text-align: center;
+  text-decoration:underline;
+}
+
+.gold h2{
+  font-family: Silom, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: #002157;
+  text-align: center;
+  text-decoration:underline;
+}
+
+.multiply h2{
+  font-family: Silom, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: #002157;
+  text-align: center;
+  text-decoration:underline;
+}
+
+.multiply p{
+  font-family: Silom, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  color: #002157;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.logoFooter img{
+  margin-top: 20px;
+  margin-left: 510px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
