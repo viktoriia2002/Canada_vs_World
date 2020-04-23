@@ -1,11 +1,11 @@
-new Chart(document.getElementById('horizontalbarChart'), {
+var updatingChart = new Chart(document.getElementById('horizontalbarChart'), {
 	type: 'horizontalBar',
 	data: {
-		labels: ['AUT','BEL','CAN','FIN','FRA','GBR','NOR','SUI','SWE','USA'],
+		labels: ['BEL','CAN','FIN','FRA','GBR','NOR','SUI','SWE','USA'],
 		datasets:[{
 			label: 'Number of Medals',
-			backgroundColor: ['#FF0000', '#800000', '#DC143C','#191970','#FF6347','#00BFFF','#FF8C00','#8B008B','#FFD700','#228B22'],
-			data: [98,4,203,147,35,11,171,77,129,319]
+			backgroundColor: [ '#FD5051', '#FFA959','#FFF661','#61EF94','#6FBEFB','#9063E9','#203D85','#1D8F94','#82C881'],
+			data: [4,203,147,35,11,171,77,129,319]
 		}]
 	},
 
@@ -21,17 +21,26 @@ new Chart(document.getElementById('horizontalbarChart'), {
 		}
 });
 
+function addData(chart, label, data, backgroundColor){
+	chart.data.labels.push(label);
+	chart.data.datasets[0].data.push(data);
+	chart.data.datasets[0].backgroundColor.push(backgroundColor);
+	chart.update();
+}
 
+setTimeout(function (){
+	addData(updatingChart, 'AUT', 98, '#DF3100');
+}, 3000);
 
-var updatingChart = new Chart (document.getElementById('barchart'),{
+new Chart (document.getElementById('barChart'),{
 	type: 'bar',
 	data:{
-		labels: ['BEL','CAN','FIN','FRA','GBR','NOR','SUI','SWE','USA'],
+		labels: ['AUT','BEL','CAN','FIN','FRA','GBR','NOR','SUI','SWE','USA'],
 		datasets:[
 		{
 			label: 'Number of Medals',
-			data: [ 7, 107, 221, 81,34, 127, 132, 177, 167],
-			backgroundColor: [ '#800000', '#DC143C','#191970','#FF6347','#00BFFF','#FF8C00','#8B008B','#FFD700','#228B22']
+			data: [103, 7, 107, 221, 81,34, 127, 132, 177, 167],
+			backgroundColor: ['#562c2c', '#f2542d', '#f5dfbb','#0e9594','#127475','#0d3b66','#4b3f72','#ff8811','#119da4','#392f5a']
 		}
 
 		]
@@ -47,16 +56,7 @@ var updatingChart = new Chart (document.getElementById('barchart'),{
 	}
 });
 
-function addData(chart, label, data, backgroundColor){
-	chart.data.labels.push(label);
-	chart.data.datasets[0].data.push(data);
-	chart.data.datasets[0].backgroundColor.push(backgroundColor);
-	chart.update();
-}
 
-setTimeOut(function(){
-	addData(updatingChart, 'AUT', '103', '#FF0000');
-},3000);
 
 
 new Chart (document.getElementById('pieChart'),{
@@ -66,7 +66,7 @@ new Chart (document.getElementById('pieChart'),{
 		datasets: [
             {
             	data:[79, 2, 315, 66, 36, 34, 159, 76, 127, 167],
-            	backgroundColor: ['#FF0000', '#800000', '#DC143C','#191970','#FF6347','#00BFFF','#FF8C00','#8B008B','#FFD700','#228B22']
+            	backgroundColor: ['#d7263d', '#f46036', '#ff8811','#fce762','#1d1128','#392f5a','#1b998b','#c5d86d','#3c91e6','#1e3888']
             }
 		]
 
@@ -82,7 +82,7 @@ new Chart (document.getElementById('pieChart'),{
 	}
 });
 
-var updatingChart = new Chart(document.getElementById('advancedChart'),{
+new Chart(document.getElementById('advancedChart'),{
 	type: 'bar',
 	data:{
 		labels: ['1994','1998','2002','2006','2010','2014'],
